@@ -7,13 +7,14 @@
 
 import Foundation
 
-
 /** Mensagem de erro detalhada */
-
 public struct Erro: Codable {
 
+    /** Conteúdo da mensagem de erro. */
+    public var mensagem: Any?
 
-
+    public init(mensagem: Any?) {
+        self.mensagem = mensagem
+    }
 
 }
-

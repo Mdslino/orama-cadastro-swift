@@ -8,7 +8,6 @@
 import Foundation
 
 
-
 public struct LoginSenhaObjeto: Codable {
 
     /** Campo texto de preenchimento obrigatório para o preenchimento do nome completo do cliente. */
@@ -32,6 +31,4 @@ public struct LoginSenhaObjeto: Codable {
         self.senha = senha
     }
 
-
 }
-

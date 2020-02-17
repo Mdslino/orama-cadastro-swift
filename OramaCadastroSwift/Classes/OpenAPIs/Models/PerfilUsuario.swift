@@ -8,13 +8,41 @@
 import Foundation
 
 
-
 public struct PerfilUsuario: Codable {
 
     public enum Nacionalidade: String, Codable {
         case brasileiroNato = "Brasileiro Nato"
         case estrangeiro = "Estrangeiro"
         case brasileiroNaturalizado = "Brasileiro Naturalizado"
+    }
+    public enum UfNascimento: String, Codable {
+        case ac = "AC"
+        case al = "AL"
+        case am = "AM"
+        case ap = "AP"
+        case ba = "BA"
+        case ce = "CE"
+        case df = "DF"
+        case es = "ES"
+        case go = "GO"
+        case ma = "MA"
+        case mg = "MG"
+        case ms = "MS"
+        case mt = "MT"
+        case pa = "PA"
+        case pb = "PB"
+        case pe = "PE"
+        case pi = "PI"
+        case pr = "PR"
+        case rj = "RJ"
+        case rn = "RN"
+        case ro = "RO"
+        case rr = "RR"
+        case rs = "RS"
+        case sc = "SC"
+        case se = "SE"
+        case sp = "SP"
+        case to = "TO"
     }
     public enum Sexo: String, Codable {
         case feminino = "Feminino"
@@ -32,10 +60,12 @@ public struct PerfilUsuario: Codable {
     public var usPerson: Bool? = false
     /** define se o usuário pode ou não ser enquadrado como pessoa politicamente exposta de acordo com a definição da Deliberação Coremec nº 2, de 1º de dezembro de 2006 */
     public var politicamenteExposto: Bool? = false
+    /** Define se o usuário é investidor qualifiquado. Investidor Qualificado - PF ou PJ que possuam investimentos financeiros em valor superior a 1 Milhão, Investidor aprovado em exame de qualificação técnica, e atestem por escrito sua condição de investidor qualificado. Investidores Profissionais, etc. */
+    public var investidorQualificado: Bool? = false
     /** Definição de Nacionalidade de acordo com o Art. 12 da CF */
     public var nacionalidade: Nacionalidade?
     /** Unidade da Federação em que a pessoa nasceu */
-    public var ufNascimento: String?
+    public var ufNascimento: UfNascimento?
     /** Município em que a pessoa nascida no Brasil nasceu. Formato é o nome lexicograficamente igual a descrição do IBGE ou o código de cidade completo do IBGE */
     public var cidadeNascimento: String?
     /** País em que a pessoa nasceu. Código ISO 3166-1 alpha-2 */
@@ -56,10 +86,12 @@ public struct PerfilUsuario: Codable {
     public var endereco: Endereco
     public var patrimonio: DadosPatrimonial?
     public var contaBancaria: [ContaBancaria]?
+    public var frontEnd: FrontEndStep?
 
-    public init(usPerson: Bool?, politicamenteExposto: Bool?, nacionalidade: Nacionalidade?, ufNascimento: String?, cidadeNascimento: String?, paisNascimento: String?, sexo: Sexo?, estadoCivil: EstadoCivil?, nomeConjuge: String?, nomeMae: String, nomePai: String?, login: LoginObjeto?, documento: [Documento], profissao: DadosProfissionais?, endereco: Endereco, patrimonio: DadosPatrimonial?, contaBancaria: [ContaBancaria]?) {
+    public init(usPerson: Bool?, politicamenteExposto: Bool?, investidorQualificado: Bool?, nacionalidade: Nacionalidade?, ufNascimento: UfNascimento?, cidadeNascimento: String?, paisNascimento: String?, sexo: Sexo?, estadoCivil: EstadoCivil?, nomeConjuge: String?, nomeMae: String, nomePai: String?, login: LoginObjeto?, documento: [Documento], profissao: DadosProfissionais?, endereco: Endereco, patrimonio: DadosPatrimonial?, contaBancaria: [ContaBancaria]?, frontEnd: FrontEndStep?) {
         self.usPerson = usPerson
         self.politicamenteExposto = politicamenteExposto
+        self.investidorQualificado = investidorQualificado
         self.nacionalidade = nacionalidade
         self.ufNascimento = ufNascimento
         self.cidadeNascimento = cidadeNascimento
@@ -75,8 +107,7 @@ public struct PerfilUsuario: Codable {
         self.endereco = endereco
         self.patrimonio = patrimonio
         self.contaBancaria = contaBancaria
+        self.frontEnd = frontEnd
     }
 
-
 }
-

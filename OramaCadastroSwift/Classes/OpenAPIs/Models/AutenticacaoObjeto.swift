@@ -8,15 +8,14 @@
 import Foundation
 
 
-
 public struct AutenticacaoObjeto: Codable {
 
     public var token: String
+    public var login: LoginObjeto?
 
-    public init(token: String) {
+    public init(token: String, login: LoginObjeto?) {
         self.token = token
+        self.login = login
     }
 
-
 }
-

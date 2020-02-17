@@ -8,7 +8,6 @@
 import Foundation
 
 
-
 public struct UsuarioSenhaObjeto: Codable {
 
     /** Identificador do usuário, CPF ou email */
@@ -21,6 +20,4 @@ public struct UsuarioSenhaObjeto: Codable {
         self.senha = senha
     }
 
-
 }
-

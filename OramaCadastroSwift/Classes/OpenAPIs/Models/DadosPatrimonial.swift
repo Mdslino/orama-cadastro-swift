@@ -7,9 +7,7 @@
 
 import Foundation
 
-
 /** Informação sobre o Patrimônio do usuário */
-
 public struct DadosPatrimonial: Codable {
 
     public enum FaixaAplicacoes: String, Codable {
@@ -46,6 +44,4 @@ public struct DadosPatrimonial: Codable {
         self.valorOutrosBens = valorOutrosBens
     }
 
-
 }
-

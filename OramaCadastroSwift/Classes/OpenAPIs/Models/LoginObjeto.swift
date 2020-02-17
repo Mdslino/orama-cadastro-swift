@@ -8,7 +8,6 @@
 import Foundation
 
 
-
 public struct LoginObjeto: Codable {
 
     /** Campo texto de preenchimento obrigatório para o preenchimento do nome completo do cliente. */
@@ -29,6 +28,4 @@ public struct LoginObjeto: Codable {
         self.dataNascimento = dataNascimento
     }
 
-
 }
-

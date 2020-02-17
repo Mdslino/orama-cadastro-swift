@@ -8,7 +8,6 @@
 import Foundation
 
 
-
 public struct LoginCriado: Codable {
 
     public var login: LoginObjeto
@@ -19,6 +18,4 @@ public struct LoginCriado: Codable {
         self.token = token
     }
 
-
 }
-

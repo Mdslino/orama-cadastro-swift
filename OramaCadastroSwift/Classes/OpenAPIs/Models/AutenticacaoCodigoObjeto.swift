@@ -8,7 +8,6 @@
 import Foundation
 
 
-
 public struct AutenticacaoCodigoObjeto: Codable {
 
     public var codigo: String
@@ -17,6 +16,4 @@ public struct AutenticacaoCodigoObjeto: Codable {
         self.codigo = codigo
     }
 
-
 }
-

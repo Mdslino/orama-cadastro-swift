@@ -8,7 +8,6 @@
 import Foundation
 
 
-
 public struct ListaPerfilUsuario: Codable {
 
     /** quantidade de elementos que foram retornados */
@@ -27,6 +26,4 @@ public struct ListaPerfilUsuario: Codable {
         self.resultados = resultados
     }
 
-
 }
-

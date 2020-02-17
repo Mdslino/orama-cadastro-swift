@@ -8,7 +8,6 @@
 import Foundation
 
 
-
 public struct Submetido: Codable {
 
     /** Estado de submissão do perfil, true caso já tenha sido submetido, false caso contrário. */
@@ -18,6 +17,4 @@ public struct Submetido: Codable {
         self.submetido = submetido
     }
 
-
 }
-

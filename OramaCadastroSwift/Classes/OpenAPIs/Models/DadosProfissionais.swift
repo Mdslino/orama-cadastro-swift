@@ -7,9 +7,7 @@
 
 import Foundation
 
-
 /** Dados profissionais do usuário */
-
 public struct DadosProfissionais: Codable {
 
     /** Profissão de acordo com a tabela de ocupação profissional */
@@ -22,6 +20,4 @@ public struct DadosProfissionais: Codable {
         self.empresa = empresa
     }
 
-
 }
-

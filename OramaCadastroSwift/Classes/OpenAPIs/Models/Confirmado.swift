@@ -8,7 +8,6 @@
 import Foundation
 
 
-
 public struct Confirmado: Codable {
 
     /** Estado de confirmação, true caso já tenha sido confirmado, false caso contrário. */
@@ -18,6 +17,4 @@ public struct Confirmado: Codable {
         self.confirmado = confirmado
     }
 
-
 }
-
